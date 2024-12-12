@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/my-logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#JavaScript">JavaScript</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span> Anjali</span><br> From UTTAR PRADESH</h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------HTML------------------ -->
+    <div id="html">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/html.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1>HTML</h1>
+                    <p>
+                        HTML elements are usually "inline-level" or "block-level" elements. An inline-level element
+                        occupies only the space bounded by the tags that define it. A block-level element occupies the
+                        entire space of its parent element (container), thereby creating a "block box".HTML is comprised
+                        of several kinds of content, each of which is allowed to be used in certain contexts and is
+                        disallowed in others. Similarly, each context has a set of other content categories it can
+                        contain and elements that can or can't be used in them. This is a guide to these categories.
+                        HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the
+                        meaning and structure of web content. Other technologies besides HTML are generally used to
+                        describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------CSS------------- -->
+        <div id="css">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/css.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1>CSS</h1>
+                        <p>
+                            CSS (cascading style sheets) is a style sheet language. It is similar to a programming
+                            language, except instead of telling a computer what to do, it tells a web browser how to
+                            display elements on a website. We use CSS to manipulate the styles of elements on a webpage.
+                            Make this button purple and give it rounded corners. Make the navbar twice as thick and give
+                            it a black background color.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- -----------------JAVA SCRIPT---------------- -->
+            <div id="JavaScript">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/javascript.png" alt="">
+                        </div>
+                        <div class="about-col-2">
+                            <h1>JavaScript</h1>
+                            <p>
+                                JavaScript is an open-source programming language designed for creating web-centric
+                                applications. It is lightweight and interpreted which makes it much faster than other
+                                languages and is integrated with HTML making it easier to implement in web applications.
+
+                                In this Introduction to JavaScript article, you will learn all about JavaScript, the
+                                backbone of web development, and understand what exactly this language is and why and
+                                how this language is used across various fields.
+
+                                JavaScript is critical for web development, and if you’ve ever thought about choosing
+                                that career path, you’d surely have come across this language. And probably, that’s why
+                                you are here in the first place.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------contact----------- -->
+                <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-left">
+                                <h1 class="sub-title">Contact Me</h1>
+                                <p><i class="fa-solid fa-paper-plane"></i>sanjali22500@gmail.com</p>
+                                <p><i class="fa-solid fa-square-phone"></i>8887757159</p>
+                                <div class="social-icons">
+                                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i> </a>
+                                    <a href="https://github.com/"><i class="fa-brands fa-square-github"></i> </a>
+                                    <a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                </div>
+                            </div>
+                            <div class="contact-right">
+                                <form>
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="email" placeholder="Your Email " required>
+                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright @ Anjali with <i class="fa-solid fa-heart"></i> a Website</p>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    var tablinks = document.getElementsByClassName("tab-links");
+                    var tabcontents = document.getElementsByClassName("tab-contents");
+
+                    function opentab(tabname) {
+                        for (tablink of tablinks) {
+                            tablink.classList.remove("active-link");
+                        }
+                        for (tabcontent of tabcontents) {
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab");
+                    }
+                </script>
+
+
+                <script>
+                    var sidemenu = document.getElementById("sidemenu");
+
+                    function openmenu() {
+                        sidemenu.style.right = "0";
+                    }
+                    function closemenu() {
+                        sidemenu.style.right = "-200px";
+                    }
+                </script>
+</body>
+
+</html>
